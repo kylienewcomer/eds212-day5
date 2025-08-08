@@ -38,6 +38,30 @@ ggplot(starwars, aes(x = height)) +
 ```
 
 ```{r}
-
+starwars$height
 ```
 
+```{r}
+sw_height_mean <- round(mean(starwars$height, na.rm = TRUE), 1)
+
+sw_height_mean
+```
+
+```{r}
+sw_height_median <- median(starwars$height, na.rm = TRUE)
+
+sw_height_median
+
+```
+```{r}
+sw_height_variance <- var(starwars$height, na.rm = TRUE)
+
+sw_height_sd <- sd(starwars$height, na.rm = TRUE)
+
+sw_height_variance
+
+
+sw_height_sd
+```
+
+The mean height of the characters in Star Wars is `r sw_height_mean` cm.

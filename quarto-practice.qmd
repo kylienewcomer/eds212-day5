@@ -1,0 +1,43 @@
+---
+title: "day5a"
+format: html
+execute:
+  warning: false
+---
+
+```{r, include=FALSE}
+
+library(tidyverse)
+
+```
+
+```{r}
+head(starwars)
+
+tail(starwars)
+
+dim(starwars)
+
+view(starwars)
+```
+
+
+```{r, echo= FALSE, fig.cap="A scatterplot of height and mass of StarWars characters"}
+ggplot(starwars, aes(height, mass, color = gender)) +
+  geom_point() +
+  labs(x = "Height (cm)",
+       y = "Mass (kg)") +
+  scale_color_manual(values = c("lightpink", "darkblue", "palegreen"))
+
+```
+
+```{r, echo= FALSE}
+ggplot(starwars, aes(x = height)) +
+  geom_histogram(color = "white", fill = "lightblue")
+
+```
+
+```{r}
+
+```
+

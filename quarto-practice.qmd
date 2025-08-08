@@ -21,7 +21,6 @@ dim(starwars)
 view(starwars)
 ```
 
-
 ```{r, echo= FALSE, fig.cap="A scatterplot of height and mass of StarWars characters"}
 ggplot(starwars, aes(height, mass, color = gender)) +
   geom_point() +
@@ -53,6 +52,7 @@ sw_height_median <- median(starwars$height, na.rm = TRUE)
 sw_height_median
 
 ```
+
 ```{r}
 sw_height_variance <- var(starwars$height, na.rm = TRUE)
 
